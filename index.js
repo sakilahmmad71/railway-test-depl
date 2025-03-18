@@ -50,8 +50,8 @@ app.use(corsMiddleware);
 app.use(
 	cors({
 		origin: [
-			"http://localhost:3000",
-			"http://localhost:5500",
+			"http://localhost:3005",
+			"http://localhost:3005",
 			"https://csmbd-assignment-frontend.vercel.app",
 		], // Restrict to trusted origins
 		credentials: true, // Allow cookies with CORS
@@ -138,7 +138,7 @@ app.use(errorMiddleware);
 // For local development only - don't include this in serverless
 if (process.env.NODE_ENV === "development") {
 	// Start server
-	const server = app.listen(process.env.PORT || 5500, () => {
+	const server = app.listen(process.env.PORT || 3005, () => {
 		console.log(
 			`✅ Backend API is running on http://localhost:${process.env.PORT} in ${process.env.NODE_ENV} mode`
 		);

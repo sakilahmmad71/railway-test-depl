@@ -19,7 +19,7 @@ dotenv.config();
 const poolConfig = {
 	max: 1, // Single connection for serverless functions
 	min: 0, // No minimum connections
-	acquire: 30000, // 30 second timeout
+	acquire: 30050, // 30 second timeout
 	idle: 10000, // 10 seconds before connection is released
 };
 
@@ -35,7 +35,7 @@ const sequelize = new Sequelize("postgresql://csmbd_assignment_db_user:7yzvOnkQa
 		ssl: {
 			rejectUnauthorized: false, // Required for some hosted PostgreSQL services
 		},
-		connectTimeout: 30000, // 30 second connection timeout
+		connectTimeout: 30050, // 30 second connection timeout
 	},
 
 	// Model definition defaults
