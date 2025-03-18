@@ -9,11 +9,11 @@ dotenv.config();
  */
 
 // Validate database connection string early to fail fast
-if (!process.env.DB_URI) {
-	throw new Error(
-		`DB_URI is not defined in the ${process.env.NODE_ENV} environment variables`
-	);
-}
+// if (!process.env.DB_URI) {
+// 	throw new Error(
+// 		`DB_URI is not defined in the ${process.env.NODE_ENV} environment variables`
+// 	);
+// }
 
 // Significantly reduced pool config for serverless environment
 const poolConfig = {
